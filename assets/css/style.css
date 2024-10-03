@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Basic styling for navbar */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #005537;
+}
+
+.card {
+    box-shadow: 10px 10px 40px 20px #e3e2e2 inset;
+}
+
+.card .fa-brands {
+    /* position: absolute; */
+    width: 80px;
+    height: 80px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    border-radius: 50%;
+    background: #d0f2d3;
+}
+
+/* Add animation to navbar items */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    height: 2px;
+    background-color: #005537;
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.hr::after {
+    content: "";
+    display: inline-block;
+    width: 120px;
+    height: 1px;
+    margin: 4px 10px;
+    background-color: #53e185;
+}
+
+/* image-animation */
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Move up by 20px */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-banner {
+    & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 700px;
+        background-color: #027d52;
+    }
+
+    & .banner-image {
+        width: 100%;
+        height: 500px;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: moveUpDown 4s infinite;
+    }
+
+    & h1 {
+        font-size: 50px;
+        color: #ffffff;
+    }
+
+    & p {
+        color: #ffffff;
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    & .button a {
+        border: 1px solid #fff;
+        padding: 10px 35px;
+        border-radius: 30px;
+        color: #ffffff;
+
+    }
+}
+
+.icon div {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-box {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.margin-top {
+    margin-top: -30px;
+}
+
+.gallery-box {
+    width: 100%;
+    height: 300px;
+}
+
+.gallery-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.team-detail {
+    position: absolute;
+    bottom: 0px;
+    background: antiquewhite;
+    width: 100%;
+    padding: 10px;
+}
+
+.team-detail h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.team-detail p {
+    margin: 5px 0;
+}
+
+.social-icon {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.social-icon .fa-brands {
+    font-size: 20px;
+}
+
+.gallery-box {
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.gallery-box:hover img {
+    transform: scale(1.099);
+    transition: transform 0.5s;
+}
+
+.resources ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.resources ul li {
+    padding: 4px 0;
+}
+
+.resources p {
+    font-size: 16px;
+    color: #b4b1b1;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        transition: max-height 0.3s ease-in-out;
+    }
+}
